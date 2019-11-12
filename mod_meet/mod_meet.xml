@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Meet team</name>
+	<author>Dylan</author>
+	<version>1.1.0</version>
+	<description>Een meet de team module</description>
+	<files>
+		<filename>mod_meet.xml</filename>
+		<filename module="mod_meet">mod_meet.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>css</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+        <field name="positie" type="number" label="Links in %" default="50" />
+				<field name="breedte_module" type="number" label="Breedte Module" default="400" />
+				<field name="hoogte_module" type="number" label="Hoogte Module" default="350" />
+				<field name="kleur_module" type="color" label="Module kleur" default="#FFFFFF" />
+				<field name="limiter" type="radio" class="btn-group btn-group-yesno" label="Limiet" default="1">
+					<option value="1">ja</option>
+					<option value="0">nee</option>
+				</field>
+				<field name="limit" type="number" label="Limiet aantal" default="10" showon="limiter:1" />
+
+				<field type="spacer" hr="true"/>
+
+				<field name="breakpoints"
+					type="repeatable"
+					icon="list"
+					description="breakpoints"
+					label="Team leden"
+					default="">
+					<fieldset hidden="true" name="list_templates_modal" repeat="true">
+						<field name="foto"
+							size="30"
+							type="media"
+              label="Foto"
+            />
+            <field name="tag"
+              type="text"
+              label="Tag"
+            />
+						<field name="positie"
+							type="number"
+							label="Id"
+						/>
+					</fieldset>
+				</field>
+        <field name="breedteTeam" type="number" label="Breedte Teamvak" default="400"/>
+        <field name="hoogteTeam" type="number" label="Hoogte Teamvak" default="350"/>
+				<field name="borderColor" type="color" label="Border kleur" default="#FFFFFF" />
+				<field name="spacing" type="number" label="spacing" default="10" />
+
+        <field type="spacer" hr="true"/>
+
+        <field name="breedtebutton" type="number" label="Breedte button" default="50"/>
+        <field name="hoogtebutton" type="number" label="Hoogte button" default="150"/>
+				<field name="borderbutton" type="color" label="Border kleur button" default="#000000" />
+        <field name="Borderradius" type="number" label="Border radius in %" default="5"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,17 @@
+
+
+.team-button{
+	width: 100px;
+  height: 40px;
+}
+.team-module{
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}
+.team-vak{
+  position: relative;
+  height: 400px;
+  width: 250px;
+  background-color: red;
+}
